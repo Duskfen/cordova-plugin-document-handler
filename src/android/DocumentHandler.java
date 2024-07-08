@@ -1,6 +1,22 @@
 package ch.ti8m.phonegap.plugins;
 
-import java.io.*;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.webkit.CookieManager;
+import android.webkit.MimeTypeMap;
+
+import androidx.core.content.FileProvider;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -8,24 +24,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import org.apache.cordova.BuildConfig;
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import android.content.pm.PackageManager;
-
-import android.content.ActivityNotFoundException;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.webkit.CookieManager;
-import android.webkit.MimeTypeMap;
-
-import android.support.v4.content.FileProvider;
 
 public class DocumentHandler extends CordovaPlugin {
 
